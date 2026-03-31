@@ -1,0 +1,62 @@
+.homeBG{
+    position: absolute;
+    object-fit: cover;
+    height: 110vh;
+    width: 100vw;
+    z-index: -2;
+    top: -10vh;
+}
+.contentBox{
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+}
+.welcomeHero{
+    position: absolute;
+    left: 0;
+    animation-name: slideLeft2, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+    display: flex;
+    flex-direction: column;
+    margin-left: clamp(1rem, 6vw, 15rem);
+}
+.blur{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.10);
+    height: 100vh;
+    width: 80vw;
+    z-index: -1;
+    backdrop-filter: blur(5px);
+    animation-name: slideLeft2, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+}
+.welcomeTo{
+    font-size: clamp(1rem, 2vw, 2rem);
+    margin-bottom: -0.5rem;
+}
+.welcomeName{
+    font-family: "Charm", sans-serif;
+    font-size: clamp(2.5rem, 4vw, 5rem);
+    margin-left: clamp(1rem, 4vw, 3rem);;
+    font-style: italic;
+}
+@media (min-width: 400px){
+    .blur{
+        width: 70vw;
+    }
+}
+@media (min-width: 600px){
+    .blur{
+        width: 50vw;
+    }
+}
+@media (min-width: 1024px){
+    .welcomeHero{
+    margin-left: clamp(10rem, 15vw, 25rem);
+}
+}

@@ -1,0 +1,77 @@
+:root{
+    --mainColor: #ede6d8;
+    --afterButton: #ede6d8;
+    --accentColor: #6B4F3A;
+    color: var(--mainColor);
+    font-family: "Merriweather";
+    --cornerMargin: clamp(1rem, 4vw, 3rem);
+    --slideIn: clamp(1rem, 4vw, 4rem);
+}
+body.home{
+    animation-name: fade;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+}
+body.menu{
+    overflow: visible;
+    background-color: #ede6d8;
+    animation-name: fade;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+}
+
+body.about{
+    overflow: visible;
+    background: #4a5948;
+    animation-name: fade;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+}
+@keyframes slideLeft2 {
+    from{
+        transform: translateX(-10%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes slideUp {
+    from{
+        transform: translateY(-5%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+@keyframes slideDown {
+    from{
+        transform: translateY(5%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+@keyframes slideRight {
+    from{
+        transform: translateX(-5%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes slideLeft {
+    from{
+        transform: translateX(5%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+@keyframes fade {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

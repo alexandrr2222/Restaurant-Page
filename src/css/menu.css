@@ -1,0 +1,224 @@
+.menuCont{
+    color: var(--accentColor);
+    margin: var(--cornerMargin);
+    margin-top: clamp(1.75rem, 12vw, 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subMenuCont{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.subMenuCont h2{
+    display: none;
+    animation-name: slideLeft, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+}
+.listCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation-name: slideDown, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+}
+.menuCont h2{
+    font-family: "Charm", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    animation-name: slideLeft, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+}
+.dishCont h3{
+    font-family: "Charm", sans-serif;
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: bold;
+    position: relative;
+}
+.dishCont h3::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1rem;
+    background-color: var(--accentColor);
+    font-family: "Charm", sans-serif;
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
+.menuItem h4{
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.menuCont h4:last-of-type{
+    margin-bottom: 0rem;
+}
+.dishCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.menuItem{
+    max-width: 400px;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    grid-template-areas: 
+    "name price"
+    "desc price";
+}
+.menuItem h4{
+    grid-area: name;
+}
+.menuItem p{
+    grid-area: desc;
+}
+.menuItem .price{
+    font-weight: bold;
+    align-self: flex-start;
+    grid-area: price;
+}
+
+
+.imgMenuCont{
+    max-width: 400px;
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.menuImage1{
+    align-self: flex-start;
+    aspect-ratio: 2 / 5;
+    max-width: 40%;
+    flex: 1;
+    object-fit: cover;
+    animation-name: slideUp, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+}
+.menuImage2{
+    margin-top: 5rem;
+    align-self: flex-end;
+    aspect-ratio: 2 / 5;
+    max-width: 40%;
+    flex: 1;
+    object-fit: cover;
+    animation-name: slideDown, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+}
+@media (min-width: 1024px){
+    .listCont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5rem;
+        row-gap: 0rem;
+        grid-row: auto auto;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgMenuCont{
+        gap: 5rem;
+    }
+    .menuImage1{
+        aspect-ratio: 3 / 5;
+        max-width: 60%;
+    }
+    .menuImage2{
+        aspect-ratio: 3 / 5;
+        max-width: 60%;
+    }
+}
+@media (min-width: 1440px){
+    .subMenuCont{
+        font-size: 0.9rem;
+        width: 100%;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: minmax(250px, 2fr) minmax(250px, 2.8fr);
+        grid-template-rows: auto auto;
+        row-gap: 0rem;
+        grid-template-areas: 
+        "picture title"
+        "picture menu";
+    }
+    .menuItem{
+        row-gap: 0;
+        column-gap: 2rem;
+    }
+    .menu .subMenuCont h2{
+        display: block;
+        grid-area: title;
+        font-family: "Charm", sans-serif;
+        font-size: 2.5rem;
+        color: var(--accentColor);
+        margin-bottom: 0;
+        
+    }
+    .imgMenuCont{
+        grid-area: picture;
+        gap: 3rem;
+        justify-items: center;
+    }
+    .menuImage1{
+        aspect-ratio: 2.2 / 4;
+        max-width: 60%;
+    }
+    .menuImage2{
+        aspect-ratio: 2.2 / 4;
+        max-width: 60%;
+        margin-top: 10rem;
+    }
+    .menuCont h2{
+        display: none;
+    }
+    .listCont{
+        grid-area: menu;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        justify-items: start;
+    }
+    .dishCont{
+        max-width: 500px;
+    }
+    .dishCont h3{
+        margin-top: 0;
+    }
+}
+@media (min-width: 1920px){
+    .imgMenuCont{
+        grid-area: picture;
+        gap: 3rem;
+        justify-items: end;
+        justify-content: start;
+    }
+    .menuImage1{
+        aspect-ratio: 3 / 5;
+        max-width: 70%;
+        margin-top: 3rem;
+    }
+    .menuImage2{
+        margin-top: 12rem;
+        aspect-ratio: 3 / 5;
+        max-width: 70%;
+    }
+    body.menu{
+        overflow: hidden;
+    }
+    .subMenuCont{
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,141 @@
+
+.contentBoxAbout{
+    margin: var(--cornerMargin);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.textPartAboutUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: clamp(1.75rem, 12vw, 4rem);
+}
+.aboutCont{
+    max-width: 500px;
+    animation-name: slideRight, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+}
+.contactCont{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    animation-name: slideLeft, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+    
+}
+.contactText{
+    text-align: center;
+}
+.aboutHead{
+    font-family: "Charm", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 2.5rem;
+    text-align: center;
+}
+.aboutText p{
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.textPartAboutUs{
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    align-items: center;
+}
+
+.contactHead{
+    font-family: "Charm", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1.75rem;
+    text-align: center;
+}
+a:link{
+    color: blanchedalmond;
+}
+.aboutImgBottom{
+    max-height: 5%;
+    object-fit: cover;
+    filter: sepia(0.3) saturate(1) brightness(0.9) contrast(1.1);
+    max-width: 300px;
+    animation-name: slideDown, fade;
+    animation-duration: 800ms, 300ms;
+    animation-timing-function: ease-out;
+    margin-top: 1.75rem;
+}
+.aboutImg1{
+    display: none;
+}
+.aboutImg2{
+    display: none;
+}
+.aboutImageCont{
+    display: none;
+}
+@media (min-width: 1440px){
+    body.about{
+        overflow: hidden;
+    }
+    .aboutHead{
+    margin-top: 0rem;
+}
+    .contactText{
+        text-align: center;
+        min-width: 300px;
+    }
+    .contentBoxAbout{
+        align-items: center;
+        gap: 3rem;
+        flex-direction: row;
+        justify-content: space-between;
+        height: 80vh;
+        align-items: center;
+    }
+    .aboutImageCont{
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+    .aboutImg1{
+        filter: sepia(0.3) saturate(1) brightness(0.9) contrast(1.1);
+        display: block;
+        object-fit: cover;
+        height: 500px;
+        max-width: 40%;
+        animation-name: slideUp, fade;
+        animation-duration: 800ms, 300ms;
+        animation-timing-function: ease-out;
+    }
+    .aboutImg2{
+        filter: sepia(0.3) saturate(1) brightness(0.9) contrast(1.1);
+        display: block;
+        object-fit: cover;
+        height: 400px;
+        max-width: 40%;
+        animation-name: slideDown, fade;
+        animation-duration: 800ms, 300ms;
+        animation-timing-function: ease-out;
+    }
+    .aboutImgBottom{
+        display: none;
+    }
+    .contentBoxAbout{
+        margin-left: 8rem;
+        margin-right: 8rem;
+    }
+    .contactHead{
+        margin-top: 0rem;
+    }
+    .contentBoxAbout{
+        flex-direction: row;
+    }
+}

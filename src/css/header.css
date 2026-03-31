@@ -1,0 +1,58 @@
+body{
+    overflow: hidden;
+    position: relative;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    z-index: 100;
+    position: relative;
+    color: var(--afterButton);
+}
+h1{
+    font-size: clamp(2rem, 2vw, 4rem);
+    font-family: "Charm", sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin-left: var(--cornerMargin);
+    margin-top: clamp(1rem, 1vw, 2rem);
+}
+.h1Part2{
+    margin-top: -0.7rem;
+    margin-left: var(--cornerMargin);
+}
+nav{
+    display: flex;
+    align-items: start;
+    gap: clamp(1rem, 3.5vw, 3rem);
+    margin-right: var(--cornerMargin);
+    
+}
+nav button{
+    margin-top: clamp(1.5rem, 2vw, 3rem);
+    font-size: clamp(1rem, 1vw, 2rem);
+    background-color: transparent;
+    border: none;
+    color: var(--afterButton);
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0.2rem;
+}
+nav button::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.05rem;
+    background-color: var(--afterButton);
+    opacity: 1;
+    transform: translate(-100%, 0);
+    transition: transform 0.3s ease;
+}
+nav button:hover::after{
+    transform: translate(0, 0);
+}
