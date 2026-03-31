@@ -35,12 +35,16 @@
     animation-duration: 800ms, 300ms;
     animation-timing-function: ease-out;
 }
+
 .dishCont h3{
     font-family: "Charm", sans-serif;
     font-size: 2rem;
     margin-top: 2rem;
     font-weight: bold;
     position: relative;
+}
+.dishCont h3:first-of-type{
+    margin-top: 0rem;
 }
 .dishCont h3::after{
     content: "";
